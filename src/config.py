@@ -1,9 +1,9 @@
-"""Central configuration for the TripLake pipeline.
+"""Central configuration for the CabStream pipeline.
 
 Storage paths are built from a single root (``LAKE_ROOT``). Pointing the whole
 lakehouse at object storage is therefore a one-line change:
 
-    export LAKE_ROOT=s3a://my-bucket/triplake
+    export LAKE_ROOT=s3a://my-bucket/cabstream
 
 Nothing below this module hard-codes a local path.
 """
@@ -152,7 +152,7 @@ def _resolve_java_home() -> str | None:
     return None
 
 
-def get_spark(app_name: str = "triplake", **extra_conf: str):
+def get_spark(app_name: str = "cabstream", **extra_conf: str):
     """Build a local-mode SparkSession.
 
     Local mode is a deployment choice, not a code choice: every transformation

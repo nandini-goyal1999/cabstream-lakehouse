@@ -152,7 +152,7 @@ wheels = [
 ]
 
 [[package]]
-name = "triplake"
+name = "cabstream"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

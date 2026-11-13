@@ -32,7 +32,7 @@ from pathlib import Path
 
 from . import config as cfg
 
-log = logging.getLogger("triplake.incremental")
+log = logging.getLogger("cabstream.incremental")
 
 LAYERS = ("bronze", "silver", "gold")
 

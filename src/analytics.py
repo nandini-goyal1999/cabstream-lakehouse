@@ -19,7 +19,7 @@ from pyspark.sql import DataFrame
 
 from . import config as cfg
 
-log = logging.getLogger("triplake.analytics")
+log = logging.getLogger("cabstream.analytics")
 
 TABLES = ("fact_trips", "dim_zone", "dim_date", "dim_vendor",
           "dim_payment_type", "dim_rate_code")
@@ -213,7 +213,7 @@ def main() -> None:
     ap.add_argument("--rows", type=int, default=12)
     args = ap.parse_args()
 
-    spark = cfg.get_spark("triplake-analytics")
+    spark = cfg.get_spark("cabstream-analytics")
     try:
         register_views(spark)
         for name in (args.query or list(QUERIES)):

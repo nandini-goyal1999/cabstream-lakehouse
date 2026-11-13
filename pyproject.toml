@@ -1,5 +1,5 @@
 [project]
-name = "triplake"
+name = "cabstream"
 version = "0.1.0"
 description = "PySpark batch lakehouse over NYC TLC trip records: bronze -> silver -> gold"
 readme = "README.md"

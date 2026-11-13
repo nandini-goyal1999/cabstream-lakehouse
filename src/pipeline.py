@@ -19,7 +19,7 @@ from .model import build_dimensions, build_fact_trips, write_fact
 from .quality import QualityGateFailure, QualityReport, print_report
 from .schemas import identify_schema
 
-log = logging.getLogger("triplake.pipeline")
+log = logging.getLogger("cabstream.pipeline")
 
 
 def run(
@@ -119,7 +119,7 @@ def run(
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    ap = argparse.ArgumentParser(description="Run the TripLake pipeline incrementally")
+    ap = argparse.ArgumentParser(description="Run the CabStream pipeline incrementally")
     ap.add_argument("--start", default=cfg.DEFAULT_START)
     ap.add_argument("--end", default=cfg.DEFAULT_END)
     ap.add_argument("--months", nargs="*")
@@ -149,7 +149,7 @@ def main() -> None:
         "fact_trips": partition_mtimes(fact_root),
     }
 
-    spark = cfg.get_spark("triplake-pipeline")
+    spark = cfg.get_spark("cabstream-pipeline")
     t0 = time.time()
     try:
         summary = run(spark, months, args.threshold, args.force)

@@ -28,7 +28,7 @@ from .schemas import (
     normalize_to_canonical,
 )
 
-log = logging.getLogger("triplake.ingest")
+log = logging.getLogger("cabstream.ingest")
 
 
 # --------------------------------------------------------------------------
@@ -198,7 +198,7 @@ def main() -> None:
         else cfg.month_range(args.start, args.end)
     )
 
-    spark = cfg.get_spark("triplake-ingest")
+    spark = cfg.get_spark("cabstream-ingest")
     try:
         zone_rows = ingest_zones(spark)
         report = ingest(spark, months)

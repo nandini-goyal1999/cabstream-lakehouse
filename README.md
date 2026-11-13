@@ -1,4 +1,4 @@
-# TripLake — a PySpark lakehouse over NYC taxi trip records
+# CabStream — a PySpark lakehouse over NYC taxi trip records
 
 **Author:** Nandini Goyal
 
@@ -62,7 +62,7 @@ Storage paths all derive from one root, so moving the lakehouse to object
 storage is a single environment variable — no code change:
 
 ```bash
-export LAKE_ROOT=s3a://my-bucket/triplake
+export LAKE_ROOT=s3a://my-bucket/cabstream
 ```
 
 ---

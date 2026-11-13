@@ -34,7 +34,7 @@ from pyspark.sql import DataFrame
 from . import config as cfg
 from .analytics import register_views
 
-log = logging.getLogger("triplake.tuning")
+log = logging.getLogger("cabstream.tuning")
 
 NOOP = "noop"
 
@@ -357,7 +357,7 @@ def main() -> None:
     ap.add_argument("--out", default=str(Path(cfg.QUALITY_ROOT) / "tuning_results.json"))
     args = ap.parse_args()
 
-    spark = cfg.get_spark("triplake-tuning")
+    spark = cfg.get_spark("cabstream-tuning")
     try:
         register_views(spark)
         experiments = build_experiments(spark)

@@ -20,7 +20,7 @@ from pathlib import Path
 
 from . import config as cfg
 
-log = logging.getLogger("triplake.quality")
+log = logging.getLogger("cabstream.quality")
 
 
 class QualityGateFailure(RuntimeError):

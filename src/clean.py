@@ -333,7 +333,7 @@ def main() -> None:
         else cfg.month_range(args.start, args.end)
     )
 
-    spark = cfg.get_spark("triplake-clean")
+    spark = cfg.get_spark("cabstream-clean")
     report = QualityReport(threshold=args.threshold)
     try:
         zone_ids = load_valid_zone_ids(spark)

@@ -14,7 +14,7 @@ from src import config as cfg
 @pytest.fixture(scope="session")
 def spark():
     session = cfg.get_spark(
-        "triplake-tests",
+        "cabstream-tests",
         # Tiny inputs; 200 shuffle partitions would create 200 empty tasks per
         # aggregation and make the suite several times slower.
         spark__sql__shuffle__partitions="4",

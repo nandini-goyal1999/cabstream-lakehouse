@@ -55,7 +55,7 @@ from pyspark.sql.types import (
 
 from . import config as cfg
 
-log = logging.getLogger("triplake.model")
+log = logging.getLogger("cabstream.model")
 
 #: Every dimension carries this member so unmappable fact rows still join.
 UNKNOWN_KEY = -1
@@ -445,7 +445,7 @@ def main() -> None:
 
     months = [cfg.Month.parse(m) for m in args.months] if args.months else None
 
-    spark = cfg.get_spark("triplake-model")
+    spark = cfg.get_spark("cabstream-model")
     try:
         dims = build_dimensions(spark)
         if not args.dims_only:
