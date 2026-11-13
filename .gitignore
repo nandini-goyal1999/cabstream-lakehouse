@@ -1,0 +1,12 @@
+# Source data and every derived lake layer. Never committed: the raw TLC files
+# are ~1.2 GB and are freely re-downloadable by running the pipeline.
+data/
+
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+spark-warehouse/
+metastore_db/
+derby.log
