@@ -1,4 +1,4 @@
-# CabStream — a PySpark lakehouse over NYC taxi trip records
+# CabStream - a PySpark lakehouse over NYC taxi trip records
 
 **Author:** Nandini Goyal
 
